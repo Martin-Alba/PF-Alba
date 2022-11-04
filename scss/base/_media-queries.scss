@@ -1,0 +1,587 @@
+@media screen and (min-width:480px){
+
+    /**! GENERAL */
+
+
+
+    .general__footer{
+        @include flex(flex, space-between, flex-start, row);
+    }
+
+    /**! INDEX */
+
+    .index__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 13vh 87vh 23vh 51vh 60vh 15vh 25vh 3vh;
+        grid-template-areas:
+        "header"
+        "hero"
+        "somos"
+        "product"
+        "services"
+        "redes"
+        "footer"
+        "copy"
+        ;
+    }
+
+    .hero{
+        h1{
+            font-size: 3.5em;
+        }
+    }
+
+    .product{
+        .product--text{
+            h2{
+                font-size: 2.5em;
+            }
+        }
+    }
+
+    .services{
+        div:nth-child(1){
+            h2{
+                font-size: 2.5em;
+            }
+        }
+    }
+
+    /**! ABOUT */
+
+    .about__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 13vh auto 30vh 3vh;
+        grid-template-areas: 
+        "header"
+        "history"
+        "footer"
+        "copy"
+        ;
+    }
+
+    /**! CONTACTO */
+
+.contact__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh auto 30vh 3vh;
+    grid-template-areas: 
+    "header"
+    "contact"
+    "footer"
+    "copy"
+    ;
+}
+
+    /**! PRODUCT */
+
+    .product__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh 130vh 30vh 3vh;
+        grid-template-areas: 
+        "header"
+        "product"
+        "footer"
+        "copy"
+        ;
+    }
+
+    .catalogue{
+        h1{
+            font-size: 2.5em;
+        }
+    }
+
+    /**! SERVICES */
+
+
+    .services__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh 210vh 30vh 3vh;
+        grid-template-areas: 
+        "header"
+        "cards"
+        "footer"
+        "copy"
+        ;
+    }
+
+    .services__cards{
+        h1{
+            font-size: 2.5em;
+        }
+    }
+}
+
+@media screen and (min-width:720px){
+
+
+    /**! INDEX */
+
+    .index__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 13vh 87vh 30vh 56vh 60vh 15vh 30vh 3vh;
+        grid-template-areas:
+        "header"
+        "hero"
+        "somos"
+        "product"
+        "services"
+        "redes"
+        "footer"
+        "copy"
+        ;
+    }
+
+    .hero{
+        h1{
+            font-size: 4.8em;
+        }
+    }
+
+    .somos{
+        @include flex(flex, space-evenly, center, row);
+        div:nth-child(1){
+            img{
+                width: 200px;
+                height: 200px;
+            }
+        }
+        div:nth-child(2){
+            width: 55%;
+        }
+    }
+
+    .product{
+        .product--text{
+            h2{
+                font-size: 3em;
+            }
+        }
+        .product--imgs{
+            div:nth-child(1){
+                img{
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+            div:nth-child(2){
+                img{
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+
+    .services{
+        div{
+            h2{
+                font-size: 3em;
+            }
+        }
+        .services--imgs{
+            div:nth-child(1){
+                img{
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+            div:nth-child(2){
+                img{
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+
+    .redes{
+        div:nth-child(1){
+            h2{
+                padding-top: 10px;
+            }
+        }
+    }
+
+    /**! ABOUT */
+
+    .history{
+        h1{
+            font-size: 4em;
+        }
+        div{
+            p{
+                font-size: 1.5em;
+            }
+        }
+    }
+
+
+    /**! PRODUCT */
+
+    .product__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh 170vh 30vh 3vh;
+        grid-template-areas: 
+        "header"
+        "product"
+        "footer"
+        "copy"
+        ;
+    }
+
+    .catalogue{
+        h1{
+            font-size: 3em;
+        }
+        div{
+            height: 155vh;
+            .pastas{
+                width: 390px;
+                height: 390px; 
+                h3{
+                    font-size: 3em;
+                }
+                div{
+                    p{
+                        font-size: 1.5em
+                    }
+                }
+            }
+            .dulces{
+                width: 390px;
+                height: 390px;  
+                h3{
+                    font-size: 3em;
+                }
+                div{
+                    p{
+                        font-size: 1.5em;
+                    }
+                }
+            }
+            .saladitos{
+                width: 390px;
+                height: 390px;  
+                h3{
+                    font-size: 3em;
+                }
+                div{
+                    p{
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+    /**! SERVICES */
+
+    .services__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh 270vh 30vh 3vh;
+        grid-template-areas: 
+        "header"
+        "cards"
+        "footer"
+        "copy"
+        ;
+    }
+
+    .services__cards{
+        h1{
+            font-size: 3em;
+        }
+        div{
+            .casamiento{
+                width: 390px;
+                height: 390px;
+                h4{
+                    font-size: 3em;
+                }
+            }
+            .aniversario{
+                width: 390px;
+                height: 390px;
+                h4{
+                    font-size: 3em;
+                }
+            }
+            .egreso{
+                width: 390px;
+                height: 390px;
+                h4{
+                    font-size: 3em;
+                }
+            }
+            .comunion{
+                width: 390px;
+                height: 390px;
+                h4{
+                    font-size: 3em;
+                }
+            }
+            .evGenerales{
+                width: 390px;
+                height: 390px;
+                h4{
+                    font-size: 3em;
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (min-width:1280px){
+
+    /**! GENERAL */
+
+    .general__footer{
+        .address{
+            display: flex;
+        }
+        .about{
+            display: flex;
+        }
+    }
+
+    .fixed{
+        display: flex;
+    }
+    
+
+    /**! INDEX */
+
+    .index__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 13vh 87vh 40vh 65vh 67vh 20vh 30vh 3vh;
+        grid-template-areas:
+        "header"
+        "hero"
+        "somos"
+        "product"
+        "services"
+        "redes"
+        "footer"
+        "copy"
+        ;
+    }
+
+    .hero{
+        h1{
+            font-size: 5em;
+        }
+    }
+
+    .somos{
+        div:nth-child(1){
+            img{
+                width: 400px;
+                height: 300px;
+            }
+        }
+        div:nth-child(2){
+            div{
+                h2{
+                    font-size: 3em;
+                }
+                p{
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+
+    .product{
+        .product--text{
+            h2{
+                font-size: 3.2em;
+            }
+            p{
+                padding: 0px 50px 0px 50px;
+            }
+        }
+        .product--imgs{
+            div:nth-child(1){
+                img{
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+            div:nth-child(2){
+                img{
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    .services{
+        div:nth-child(1){
+            h2{
+                font-size: 3.2em;
+            }
+            p{
+                padding: 0px 60px 0px 60px;
+            }
+        }
+        .services--imgs{
+            div:nth-child(1){
+                img{
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+            div:nth-child(2){
+                img{
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    /**! ABOUT */
+
+    .history{
+        div{
+            p{
+                padding: 0px 50px 0px 50px;
+            }
+        }
+    }
+
+    /**! PRODUCT */
+
+    .product__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh 60vh 30vh 3vh;
+        grid-template-areas: 
+        "header"
+        "product"
+        "footer"
+        "copy"
+        ;
+    }
+
+    .catalogue{
+        div{
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            .pastas{
+                display: flex;
+                flex-direction: column;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .dulces{
+                display: flex;
+                flex-direction: column;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        padding-bottom: 40px;
+                    }
+                }
+            }
+            .saladitos{
+                display: flex;
+                flex-direction: column;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        padding-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    /**! SERVICES */
+
+    .services__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh 120vh 30vh 3vh;
+        grid-template-areas: 
+        "header"
+        "cards"
+        "footer"
+        "copy"
+        ;
+    }
+
+    .services__cards{
+        div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .casamiento{
+                @include flex(flex, center, flex-start, none);
+            }
+            .aniversario{
+                @include flex(flex, center, flex-start, none);
+            }
+            .egreso{
+                @include flex(flex, center, flex-start, none);
+            }
+            .comunion{
+                @include flex(flex, center, flex-start, none);
+            }
+            .evGenerales{
+                @include flex(flex, center, flex-start, none);
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1600px){
+
+    /**! INDEX */
+
+    .index__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 12vh 88vh 40vh 65vh 67vh 20vh 30vh 3vh;
+        grid-template-areas:
+        "header"
+        "hero"
+        "somos"
+        "product"
+        "services"
+        "redes"
+        "footer"
+        "copy"
+        ;
+    }
+
+    /**! ABOUT */
+
+    .about__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 12vh auto 30vh 3vh;
+        grid-template-areas: 
+        "header"
+        "history"
+        "footer"
+        "copy"
+        ;
+    }
+}

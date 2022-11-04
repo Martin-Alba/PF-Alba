@@ -1,0 +1,719 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Raleway:ital,wght@0,100;0,300;0,800;1,100;1,300;1,800&display=swap");
+.general__boton, .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.general__footer .about, .general__footer .about div:nth-child(2) div:nth-child(2), .general__footer .address {
+  display: flex;
+  flex-direction: column; }
+
+.somos, .general__footer .contact div:nth-child(2) div:nth-child(1), .general__footer .contact div:nth-child(2) div:nth-child(2), .general__footer .contact div:nth-child(2) div:nth-child(3), .general__footer .contact div:nth-child(2) div:nth-child(4), .general__footer .about div:nth-child(2), .general__footer .address .address--data {
+  display: flex;
+  flex-direction: row; }
+
+.services__cards div .casamiento, .services__cards div .aniversario, .services__cards div .egreso, .services__cards div .comunion, .services__cards div .evGenerales {
+  display: flex;
+  justify-content: flex-start; }
+
+/**! MOBILE */
+.catalogue div .pastas, .catalogue div .dulces, .catalogue div .saladitos, .services__cards div .casamiento, .services__cards div .aniversario, .services__cards div .egreso, .services__cards div .comunion, .services__cards div .evGenerales {
+  width: 290px;
+  height: 290px; }
+
+.catalogue div .pastas, .catalogue div .dulces, .catalogue div .saladitos, .services__cards div .casamiento, .services__cards div .aniversario, .services__cards div .egreso, .services__cards div .comunion, .services__cards div .evGenerales {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20%; }
+
+.product .product--imgs div:nth-child(1) img, .product .product--imgs div:nth-child(2) img, .services .services--imgs div:nth-child(1) img, .services .services--imgs div:nth-child(2) img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px; }
+
+.services div h2 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold; }
+
+.catalogue div .pastas div p, .catalogue div .dulces div p, .catalogue div .saladitos p {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1em; }
+
+.somos div:nth-child(1) img, .product .product--imgs div:nth-child(1) img, .product .product--imgs div:nth-child(2) img, .services .services--imgs div:nth-child(1) img, .services .services--imgs div:nth-child(2) img, .catalogue div .pastas, .catalogue div .dulces, .catalogue div .saladitos, .services__cards div .casamiento, .services__cards div .aniversario, .services__cards div .egreso, .services__cards div .comunion, .services__cards div .evGenerales {
+  box-shadow: 6px 6px 9px 2px rgba(0, 0, 0, 0.57);
+  -webkit-box-shadow: 6px 6px 9px 2px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 6px 6px 9px 2px rgba(0, 0, 0, 0.57); }
+
+* {
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+span {
+  color: #f694c1; }
+
+body {
+  color: #f0f0f0;
+  font-family: 'Raleway', sans-serif; }
+
+.general__boton {
+  width: 100%;
+  padding-top: 30px; }
+  .general__boton .boton {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid rgba(100, 100, 100, 0.1);
+    padding: 5px;
+    border-radius: 8px 30px 8px 30px;
+    cursor: pointer;
+    color: #f0f0f0;
+    background-size: 200%;
+    transition: 0.6s;
+    background-image: linear-gradient(to left, #faafd2, #FF4990, #FAAFD2); }
+    .general__boton .boton:hover {
+      background-position: right;
+      color: #1e1e1e;
+      border-radius: 30px 8px 30px 8px; }
+
+.general__copy {
+  grid-area: copy;
+  text-align: center; }
+
+.fixed {
+  position: fixed;
+  left: 1%;
+  bottom: 3%; }
+
+header {
+  grid-area: header; }
+  header .bg-light {
+    background-color: #f0f0f0 !important; }
+  header .navbar-light .navbar-brand {
+    color: #f694c1;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    font-weight: bold; }
+  header .navbar-light .navbar-brand:hover {
+    color: #f694c1; }
+  header .collapse {
+    display: flex;
+    justify-content: flex-end; }
+  header .navbar-light .navbar-nav .nav-link.active,
+  header .navbar-light .navbar-nav .show .nav-link {
+    color: #1e1e1e;
+    font-size: 1.2em; }
+  header .navbar-light .navbar-nav .nav-link {
+    color: #f694c1; }
+  header .navbar-light .navbar-nav .nav-link {
+    color: #1e1e1e;
+    font-size: 1.2em;
+    font-weight: bold; }
+  header .navbar-light .navbar-nav .nav-link:hover {
+    color: #f694c1; }
+
+/**! Mobile */
+.fixed {
+  display: none; }
+
+.general__footer .address {
+  display: none; }
+
+.general__footer .about {
+  display: none; }
+
+/**! INDEX */
+.index__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 13vh 87vh 30vh 57vh 69vh 15vh 47vh 3vh;
+  grid-template-areas: "header" "hero" "somos" "product" "services" "redes" "footer" "copy";
+  background-color: #1e1e1e; }
+
+.hero {
+  grid-area: hero;
+  height: 87vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%), url(../img/webMain.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .hero h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center; }
+
+.somos {
+  grid-area: somos;
+  padding: 30px 10px 30px 10px; }
+  .somos div:nth-child(1) img {
+    height: 140px;
+    width: 140px;
+    border-radius: 10px; }
+  .somos div:nth-child(2) div {
+    text-align: center;
+    padding-left: 5px; }
+    .somos div:nth-child(2) div h2 {
+      font-size: 2em; }
+    .somos div:nth-child(2) div p {
+      font-size: 1em; }
+
+.product {
+  grid-area: product; }
+  .product .product--text {
+    padding: 0px 10px 0px 10px; }
+    .product .product--text h2 {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold; }
+  .product .product--imgs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: none;
+    flex-direction: row; }
+
+.services {
+  padding-top: 35px;
+  grid-area: services; }
+  .services div h3 {
+    padding: 0px 10px 0px 10px;
+    text-align: center; }
+  .services div p {
+    padding: 0px 10px 0px 10px; }
+  .services .services--imgs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row; }
+
+.redes {
+  grid-area: redes;
+  padding-top: 10px; }
+  .redes div:nth-child(1) h2 {
+    text-align: center; }
+  .redes div:nth-child(2) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: none;
+    flex-direction: row; }
+
+/**! ABOUT */
+.about__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 13vh auto 50vh 3vh;
+  grid-template-areas: "header" "history" "footer" "copy";
+  background-color: #1e1e1e; }
+
+.history {
+  grid-area: history;
+  font-family: 'Dancing Script', cursive;
+  padding: 0px 10px 0px 10px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.3) 100%), url(../img/webMain.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  .history h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px; }
+  .history div {
+    font-size: 1.4em; }
+
+/**! CONTACTO */
+.contact__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15vh auto 50vh 3vh;
+  grid-template-areas: "header" "contact" "footer" "copy";
+  background-color: #1e1e1e; }
+
+.contact__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  padding: 30px 0px 30px 0px; }
+  .contact__form div {
+    width: 320px;
+    background-color: #f0f0f0; }
+    .contact__form div form {
+      padding-left: 10px; }
+      .contact__form div form h1 {
+        color: #f694c1;
+        font-size: 2em;
+        font-weight: 600; }
+      .contact__form div form p {
+        color: #1e1e1e;
+        padding-right: 10px; }
+      .contact__form div form fieldset {
+        padding: 0px 10px 10px 0px; }
+        .contact__form div form fieldset input {
+          border: none;
+          width: 100%;
+          background-color: #f0f0f0; }
+          .contact__form div form fieldset input:focus-visible {
+            outline: none; }
+      .contact__form div form select {
+        background-color: #f0f0f0;
+        padding: 5px; }
+        .contact__form div form select:focus-visible {
+          outline: none; }
+      .contact__form div form textarea {
+        background-color: #f0f0f0;
+        margin-top: 10px;
+        border: none;
+        resize: none;
+        height: 150px;
+        width: 100%; }
+        .contact__form div form textarea:focus-visible {
+          outline: none; }
+      .contact__form div form div {
+        width: 100%;
+        padding: 0px 10px 10px 0px; }
+        .contact__form div form div button {
+          background-color: #f694c1;
+          width: 100%;
+          border: none;
+          padding: 5px;
+          font-weight: bold;
+          color: #f0f0f0; }
+
+/**! PRODUCT */
+.product__container {
+  background-color: #1e1e1e;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15vh 130vh 50vh 3vh;
+  grid-template-areas: "header" "product" "footer" "copy"; }
+
+.catalogue {
+  grid-area: product; }
+  .catalogue h1 {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px 10px 20px 10px;
+    text-align: center; }
+  .catalogue div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 120vh; }
+    .catalogue div .pastas {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, black 100%), url(../img/spaghetti.jpg);
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .catalogue div .pastas h3 {
+        font-size: 2em;
+        margin-top: 5px;
+        border-radius: 10%; }
+    .catalogue div .dulces {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, black 100%), url(../img/cake.jpg); }
+      .catalogue div .dulces h3 {
+        font-size: 2em;
+        margin-top: 5px;
+        margin-bottom: 40px; }
+    .catalogue div .saladitos {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, black 100%), url(../img/miga.jpg); }
+      .catalogue div .saladitos h3 {
+        font-size: 2em;
+        margin-top: 5px;
+        margin-bottom: 30px; }
+
+/** SERVICES */
+.services__container {
+  background-color: #1e1e1e;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15vh 215vh 50vh 3vh;
+  grid-template-areas: "header" "cards" "footer" "copy"; }
+
+.services__cards {
+  grid-area: cards;
+  text-align: center; }
+  .services__cards h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    padding: 20px 10px 20px 10px; }
+  .services__cards h3 {
+    font-size: 1em;
+    padding: 0px 10px 0px 10px; }
+  .services__cards div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; }
+    .services__cards div .casamiento {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%), url(../img/casamiento.jpg);
+      margin: 30px 0px 20px 0px; }
+      .services__cards div .casamiento h4 {
+        font-size: 1.7em;
+        margin-top: 5px;
+        border-radius: 10px; }
+    .services__cards div .aniversario {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%), url(../img/aniversario.jpg);
+      margin-bottom: 20px; }
+      .services__cards div .aniversario h4 {
+        font-size: 1.7em;
+        margin-top: 5px;
+        border-radius: 10px; }
+    .services__cards div .egreso {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%), url(../img/graduacion.jpg);
+      margin-bottom: 20px; }
+      .services__cards div .egreso h4 {
+        font-size: 1.7em;
+        margin-top: 5px;
+        border-radius: 10px; }
+    .services__cards div .comunion {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%), url(../img/comunion.jpg);
+      margin-bottom: 20px; }
+      .services__cards div .comunion h4 {
+        font-size: 1.7em;
+        margin-top: 5px;
+        border-radius: 10px; }
+    .services__cards div .evGenerales {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%), url(../img/eg.jpg); }
+      .services__cards div .evGenerales h4 {
+        font-size: 1.6em;
+        margin-top: 5px;
+        border-radius: 10px; }
+
+.general__footer {
+  grid-area: footer;
+  padding: 0px 10px 0px 10px; }
+  .general__footer .contact div:nth-child(1) h2 {
+    font-size: 1em; }
+  .general__footer .contact div:nth-child(2) div:nth-child(1) {
+    padding-bottom: 5px; }
+    .general__footer .contact div:nth-child(2) div:nth-child(1) p {
+      font-size: 0.9em;
+      padding-left: 5px; }
+  .general__footer .contact div:nth-child(2) div:nth-child(2) {
+    padding-bottom: 5px; }
+    .general__footer .contact div:nth-child(2) div:nth-child(2) p {
+      font-size: 0.9em;
+      padding-left: 5px; }
+  .general__footer .contact div:nth-child(2) div:nth-child(3) {
+    padding-bottom: 5px; }
+    .general__footer .contact div:nth-child(2) div:nth-child(3) p {
+      font-size: 0.9em;
+      padding-left: 5px; }
+  .general__footer .contact div:nth-child(2) div:nth-child(4) {
+    padding-bottom: 5px; }
+    .general__footer .contact div:nth-child(2) div:nth-child(4) a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 0.9em;
+      padding-left: 5px; }
+  .general__footer .about div:nth-child(1) h2 {
+    font-size: 1em; }
+  .general__footer .about div:nth-child(2) div:nth-child(2) a {
+    padding: 0px 0px 15px 10px;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #f0f0f0; }
+  .general__footer .address div h2 {
+    font-size: 1em; }
+  .general__footer .address .address--data div:nth-child(2) p {
+    font-size: 0.9em; }
+  .general__footer .gmap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: none;
+    padding-top: 10px; }
+    .general__footer .gmap iframe {
+      border-radius: 10px; }
+
+@media screen and (min-width: 480px) {
+  /**! GENERAL */
+  .general__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row; }
+  /**! INDEX */
+  .index__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13vh 87vh 23vh 51vh 60vh 15vh 25vh 3vh;
+    grid-template-areas: "header" "hero" "somos" "product" "services" "redes" "footer" "copy"; }
+  .hero h1 {
+    font-size: 3.5em; }
+  .product .product--text h2 {
+    font-size: 2.5em; }
+  .services div:nth-child(1) h2 {
+    font-size: 2.5em; }
+  /**! ABOUT */
+  .about__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13vh auto 30vh 3vh;
+    grid-template-areas: "header" "history" "footer" "copy"; }
+  /**! CONTACTO */
+  .contact__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh auto 30vh 3vh;
+    grid-template-areas: "header" "contact" "footer" "copy"; }
+  /**! PRODUCT */
+  .product__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 130vh 30vh 3vh;
+    grid-template-areas: "header" "product" "footer" "copy"; }
+  .catalogue h1 {
+    font-size: 2.5em; }
+  /**! SERVICES */
+  .services__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 210vh 30vh 3vh;
+    grid-template-areas: "header" "cards" "footer" "copy"; }
+  .services__cards h1 {
+    font-size: 2.5em; } }
+
+@media screen and (min-width: 720px) {
+  /**! INDEX */
+  .index__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13vh 87vh 30vh 56vh 60vh 15vh 30vh 3vh;
+    grid-template-areas: "header" "hero" "somos" "product" "services" "redes" "footer" "copy"; }
+  .hero h1 {
+    font-size: 4.8em; }
+  .somos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row; }
+    .somos div:nth-child(1) img {
+      width: 200px;
+      height: 200px; }
+    .somos div:nth-child(2) {
+      width: 55%; }
+  .product .product--text h2 {
+    font-size: 3em; }
+  .product .product--imgs div:nth-child(1) img {
+    width: 180px;
+    height: 180px; }
+  .product .product--imgs div:nth-child(2) img {
+    width: 180px;
+    height: 180px; }
+  .services div h2 {
+    font-size: 3em; }
+  .services .services--imgs div:nth-child(1) img {
+    width: 180px;
+    height: 180px; }
+  .services .services--imgs div:nth-child(2) img {
+    width: 180px;
+    height: 180px; }
+  .redes div:nth-child(1) h2 {
+    padding-top: 10px; }
+  /**! ABOUT */
+  .history h1 {
+    font-size: 4em; }
+  .history div p {
+    font-size: 1.5em; }
+  /**! PRODUCT */
+  .product__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 170vh 30vh 3vh;
+    grid-template-areas: "header" "product" "footer" "copy"; }
+  .catalogue h1 {
+    font-size: 3em; }
+  .catalogue div {
+    height: 155vh; }
+    .catalogue div .pastas {
+      width: 390px;
+      height: 390px; }
+      .catalogue div .pastas h3 {
+        font-size: 3em; }
+      .catalogue div .pastas div p {
+        font-size: 1.5em; }
+    .catalogue div .dulces {
+      width: 390px;
+      height: 390px; }
+      .catalogue div .dulces h3 {
+        font-size: 3em; }
+      .catalogue div .dulces div p {
+        font-size: 1.5em; }
+    .catalogue div .saladitos {
+      width: 390px;
+      height: 390px; }
+      .catalogue div .saladitos h3 {
+        font-size: 3em; }
+      .catalogue div .saladitos div p {
+        font-size: 1.5em; }
+  /**! SERVICES */
+  .services__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 270vh 30vh 3vh;
+    grid-template-areas: "header" "cards" "footer" "copy"; }
+  .services__cards h1 {
+    font-size: 3em; }
+  .services__cards div .casamiento {
+    width: 390px;
+    height: 390px; }
+    .services__cards div .casamiento h4 {
+      font-size: 3em; }
+  .services__cards div .aniversario {
+    width: 390px;
+    height: 390px; }
+    .services__cards div .aniversario h4 {
+      font-size: 3em; }
+  .services__cards div .egreso {
+    width: 390px;
+    height: 390px; }
+    .services__cards div .egreso h4 {
+      font-size: 3em; }
+  .services__cards div .comunion {
+    width: 390px;
+    height: 390px; }
+    .services__cards div .comunion h4 {
+      font-size: 3em; }
+  .services__cards div .evGenerales {
+    width: 390px;
+    height: 390px; }
+    .services__cards div .evGenerales h4 {
+      font-size: 3em; } }
+
+@media screen and (min-width: 1280px) {
+  /**! GENERAL */
+  .general__footer .address {
+    display: flex; }
+  .general__footer .about {
+    display: flex; }
+  .fixed {
+    display: flex; }
+  /**! INDEX */
+  .index__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13vh 87vh 40vh 65vh 67vh 20vh 30vh 3vh;
+    grid-template-areas: "header" "hero" "somos" "product" "services" "redes" "footer" "copy"; }
+  .hero h1 {
+    font-size: 5em; }
+  .somos div:nth-child(1) img {
+    width: 400px;
+    height: 300px; }
+  .somos div:nth-child(2) div h2 {
+    font-size: 3em; }
+  .somos div:nth-child(2) div p {
+    font-size: 1.3em; }
+  .product .product--text h2 {
+    font-size: 3.2em; }
+  .product .product--text p {
+    padding: 0px 50px 0px 50px; }
+  .product .product--imgs div:nth-child(1) img {
+    width: 400px;
+    height: 300px; }
+  .product .product--imgs div:nth-child(2) img {
+    width: 400px;
+    height: 300px; }
+  .services div:nth-child(1) h2 {
+    font-size: 3.2em; }
+  .services div:nth-child(1) p {
+    padding: 0px 60px 0px 60px; }
+  .services .services--imgs div:nth-child(1) img {
+    width: 400px;
+    height: 300px; }
+  .services .services--imgs div:nth-child(2) img {
+    width: 400px;
+    height: 300px; }
+  /**! ABOUT */
+  .history div p {
+    padding: 0px 50px 0px 50px; }
+  /**! PRODUCT */
+  .product__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 60vh 30vh 3vh;
+    grid-template-areas: "header" "product" "footer" "copy"; }
+  .catalogue div {
+    height: auto;
+    display: flex;
+    flex-direction: row; }
+    .catalogue div .pastas {
+      display: flex;
+      flex-direction: column; }
+      .catalogue div .pastas div {
+        display: flex;
+        flex-direction: column; }
+    .catalogue div .dulces {
+      display: flex;
+      flex-direction: column; }
+      .catalogue div .dulces div {
+        display: flex;
+        flex-direction: column; }
+        .catalogue div .dulces div p {
+          padding-bottom: 40px; }
+    .catalogue div .saladitos {
+      display: flex;
+      flex-direction: column; }
+      .catalogue div .saladitos div {
+        display: flex;
+        flex-direction: column; }
+        .catalogue div .saladitos div p {
+          padding-bottom: 30px; }
+  /**! SERVICES */
+  .services__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 120vh 30vh 3vh;
+    grid-template-areas: "header" "cards" "footer" "copy"; }
+  .services__cards div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .services__cards div .casamiento {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: none; }
+    .services__cards div .aniversario {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: none; }
+    .services__cards div .egreso {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: none; }
+    .services__cards div .comunion {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: none; }
+    .services__cards div .evGenerales {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: none; } }
+
+@media screen and (min-width: 1600px) {
+  /**! INDEX */
+  .index__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12vh 88vh 40vh 65vh 67vh 20vh 30vh 3vh;
+    grid-template-areas: "header" "hero" "somos" "product" "services" "redes" "footer" "copy"; }
+  /**! ABOUT */
+  .about__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12vh auto 30vh 3vh;
+    grid-template-areas: "header" "history" "footer" "copy"; } }
