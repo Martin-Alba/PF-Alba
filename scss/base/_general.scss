@@ -6,6 +6,11 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 300px;
+    height: auto;
 }
 
 span{
@@ -15,6 +20,10 @@ span{
 body{
     color: $color-letras;
     font-family: 'Raleway', sans-serif;
+}
+
+main{
+    grid-area: main;
 }
 
 .general__boton{
@@ -40,6 +49,7 @@ body{
         }
     }
 }
+
 
 .general__copy{
     grid-area: copy;

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Raleway:ital,wght@0,100;0,300;0,800;1,100;1,300;1,800&display=swap");
-.general__boton, .hero {
+.general__boton, .index__container .hero, .index__container .general__footer .whatsapp {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -8,51 +8,37 @@
   display: flex;
   flex-direction: column; }
 
-.somos, .general__footer .contact div:nth-child(2) div:nth-child(1), .general__footer .contact div:nth-child(2) div:nth-child(2), .general__footer .contact div:nth-child(2) div:nth-child(3), .general__footer .contact div:nth-child(2) div:nth-child(4), .general__footer .about div:nth-child(2), .general__footer .address .address--data {
+.general__footer .contact div:nth-child(2) div:nth-child(1), .general__footer .contact div:nth-child(2) div:nth-child(2), .general__footer .contact div:nth-child(2) div:nth-child(3), .general__footer .contact div:nth-child(2) div:nth-child(4), .general__footer .about div:nth-child(2), .general__footer .address .address--data {
   display: flex;
   flex-direction: row; }
 
-.services__cards div .casamiento, .services__cards div .aniversario, .services__cards div .egreso, .services__cards div .comunion, .services__cards div .evGenerales {
-  display: flex;
-  justify-content: flex-start; }
-
 /**! MOBILE */
-.catalogue div .pastas, .catalogue div .dulces, .catalogue div .saladitos, .services__cards div .casamiento, .services__cards div .aniversario, .services__cards div .egreso, .services__cards div .comunion, .services__cards div .evGenerales {
-  width: 290px;
-  height: 290px; }
-
-.catalogue div .pastas, .catalogue div .dulces, .catalogue div .saladitos, .services__cards div .casamiento, .services__cards div .aniversario, .services__cards div .egreso, .services__cards div .comunion, .services__cards div .evGenerales {
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 20%; }
-
-.product .product--imgs div:nth-child(1) img, .product .product--imgs div:nth-child(2) img, .services .services--imgs div:nth-child(1) img, .services .services--imgs div:nth-child(2) img {
-  width: 150px;
-  height: 150px;
+.index__container .somos div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(2) img, .index__container .services div:nth-child(2) div:nth-child(1) img, .index__container .services div:nth-child(2) div:nth-child(2) img {
+  width: 100%;
+  height: auto;
   border-radius: 10px; }
 
-.services div h2 {
-  text-align: center;
+.index__container .product div:nth-child(1) h2, .index__container .services div:nth-child(1) h2 {
   font-size: 2em;
+  text-align: center;
   font-weight: bold; }
 
-.catalogue div .pastas div p, .catalogue div .dulces div p, .catalogue div .saladitos p {
-  font-size: 1em;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1em; }
-
-.somos div:nth-child(1) img, .product .product--imgs div:nth-child(1) img, .product .product--imgs div:nth-child(2) img, .services .services--imgs div:nth-child(1) img, .services .services--imgs div:nth-child(2) img, .catalogue div .pastas, .catalogue div .dulces, .catalogue div .saladitos, .services__cards div .casamiento, .services__cards div .aniversario, .services__cards div .egreso, .services__cards div .comunion, .services__cards div .evGenerales {
-  box-shadow: 6px 6px 9px 2px rgba(0, 0, 0, 0.57);
-  -webkit-box-shadow: 6px 6px 9px 2px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: 6px 6px 9px 2px rgba(0, 0, 0, 0.57); }
+.index__container .somos div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(2) img, .index__container .services div:nth-child(2) div:nth-child(1) img, .index__container .services div:nth-child(2) div:nth-child(2) img {
+  box-shadow: 6px 6px 9px 2px black;
+  -webkit-box-shadow: 6px 6px 9px 2px black;
+  -moz-box-shadow: 6px 6px 9px 2px black; }
 
 * {
   scroll-behavior: smooth;
   list-style: none;
   text-decoration: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
+
+img {
+  width: 300px;
+  height: auto; }
 
 span {
   color: #f694c1; }
@@ -60,6 +46,9 @@ span {
 body {
   color: #f0f0f0;
   font-family: 'Raleway', sans-serif; }
+
+main {
+  grid-area: main; }
 
 .general__boton {
   width: 100%;
@@ -78,7 +67,7 @@ body {
     background-image: linear-gradient(to left, #faafd2, #FF4990, #FAAFD2); }
     .general__boton .boton:hover {
       background-position: right;
-      color: #1e1e1e;
+      color: #111111;
       border-radius: 30px 8px 30px 8px; }
 
 .general__copy {
@@ -93,7 +82,9 @@ body {
 header {
   grid-area: header; }
   header .bg-light {
-    background-color: #f0f0f0 !important; }
+    background-color: #050505 !important; }
+  header .navbar-light .navbar-toggler-icon {
+    background-image: url(../img/navBar.png); }
   header .navbar-light .navbar-brand {
     color: #f694c1;
     font-family: 'Dancing Script', cursive;
@@ -106,12 +97,12 @@ header {
     justify-content: flex-end; }
   header .navbar-light .navbar-nav .nav-link.active,
   header .navbar-light .navbar-nav .show .nav-link {
-    color: #1e1e1e;
+    color: #f0f0f0;
     font-size: 1.2em; }
   header .navbar-light .navbar-nav .nav-link {
     color: #f694c1; }
   header .navbar-light .navbar-nav .nav-link {
-    color: #1e1e1e;
+    color: #f0f0f0;
     font-size: 1.2em;
     font-weight: bold; }
   header .navbar-light .navbar-nav .nav-link:hover {
@@ -131,262 +122,94 @@ header {
 .index__container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 13vh 87vh 30vh 57vh 69vh 15vh 47vh 3vh;
-  grid-template-areas: "header" "hero" "somos" "product" "services" "redes" "footer" "copy";
-  background-color: #1e1e1e; }
-
-.hero {
-  grid-area: hero;
-  height: 87vh;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%), url(../img/webMain.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .hero h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    text-align: center; }
-
-.somos {
-  grid-area: somos;
-  padding: 30px 10px 30px 10px; }
-  .somos div:nth-child(1) img {
-    height: 140px;
-    width: 140px;
-    border-radius: 10px; }
-  .somos div:nth-child(2) div {
-    text-align: center;
-    padding-left: 5px; }
-    .somos div:nth-child(2) div h2 {
-      font-size: 2em; }
-    .somos div:nth-child(2) div p {
-      font-size: 1em; }
-
-.product {
-  grid-area: product; }
-  .product .product--text {
-    padding: 0px 10px 0px 10px; }
-    .product .product--text h2 {
-      text-align: center;
-      font-size: 2em;
-      font-weight: bold; }
-  .product .product--imgs {
+  grid-template-rows: 13vh auto auto 3vh;
+  grid-template-areas: "header" "main" "footer" "copy";
+  background-color: #111111; }
+  .index__container .hero {
+    height: calc(100vh - 106px);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%), url(../img/webMain.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .index__container .hero h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      text-align: center; }
+  .index__container .somos {
+    width: 100%;
+    height: auto;
+    padding: 15px;
     display: flex;
-    justify-content: space-evenly;
-    align-items: none;
-    flex-direction: row; }
-
-.services {
-  padding-top: 35px;
-  grid-area: services; }
-  .services div h3 {
-    padding: 0px 10px 0px 10px;
-    text-align: center; }
-  .services div p {
-    padding: 0px 10px 0px 10px; }
-  .services .services--imgs {
-    display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row; }
-
-.redes {
-  grid-area: redes;
-  padding-top: 10px; }
-  .redes div:nth-child(1) h2 {
-    text-align: center; }
-  .redes div:nth-child(2) {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: none;
-    flex-direction: row; }
-
-/**! ABOUT */
-.about__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 13vh auto 50vh 3vh;
-  grid-template-areas: "header" "history" "footer" "copy";
-  background-color: #1e1e1e; }
-
-.history {
-  grid-area: history;
-  font-family: 'Dancing Script', cursive;
-  padding: 0px 10px 0px 10px;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.3) 100%), url(../img/webMain.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
-  .history h1 {
-    font-size: 3em;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 20px; }
-  .history div {
-    font-size: 1.4em; }
-
-/**! CONTACTO */
-.contact__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 15vh auto 50vh 3vh;
-  grid-template-areas: "header" "contact" "footer" "copy";
-  background-color: #1e1e1e; }
-
-.contact__form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: none;
-  padding: 30px 0px 30px 0px; }
-  .contact__form div {
-    width: 320px;
-    background-color: #f0f0f0; }
-    .contact__form div form {
-      padding-left: 10px; }
-      .contact__form div form h1 {
-        color: #f694c1;
-        font-size: 2em;
-        font-weight: 600; }
-      .contact__form div form p {
-        color: #1e1e1e;
-        padding-right: 10px; }
-      .contact__form div form fieldset {
-        padding: 0px 10px 10px 0px; }
-        .contact__form div form fieldset input {
-          border: none;
-          width: 100%;
-          background-color: #f0f0f0; }
-          .contact__form div form fieldset input:focus-visible {
-            outline: none; }
-      .contact__form div form select {
-        background-color: #f0f0f0;
-        padding: 5px; }
-        .contact__form div form select:focus-visible {
-          outline: none; }
-      .contact__form div form textarea {
-        background-color: #f0f0f0;
-        margin-top: 10px;
-        border: none;
-        resize: none;
-        height: 150px;
-        width: 100%; }
-        .contact__form div form textarea:focus-visible {
-          outline: none; }
-      .contact__form div form div {
-        width: 100%;
-        padding: 0px 10px 10px 0px; }
-        .contact__form div form div button {
-          background-color: #f694c1;
-          width: 100%;
-          border: none;
-          padding: 5px;
-          font-weight: bold;
-          color: #f0f0f0; }
-
-/**! PRODUCT */
-.product__container {
-  background-color: #1e1e1e;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 15vh 130vh 50vh 3vh;
-  grid-template-areas: "header" "product" "footer" "copy"; }
-
-.catalogue {
-  grid-area: product; }
-  .catalogue h1 {
-    font-size: 2em;
-    font-weight: bold;
-    padding: 20px 10px 20px 10px;
-    text-align: center; }
-  .catalogue div {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    height: 120vh; }
-    .catalogue div .pastas {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, black 100%), url(../img/spaghetti.jpg);
-      background-position: center;
+    .index__container .somos div:nth-child(1) {
+      padding-right: 5px;
+      width: 100%; }
+    .index__container .somos div:nth-child(2) {
+      width: 100%;
+      padding-left: 5px; }
+      .index__container .somos div:nth-child(2) .somos--text h2 {
+        text-align: center;
+        font-size: 1.15em;
+        font-weight: bold; }
+      .index__container .somos div:nth-child(2) .somos--text p {
+        text-align: center;
+        font-size: 1em; }
+  .index__container .product {
+    width: 100%;
+    height: auto;
+    padding: 15px; }
+    .index__container .product div:nth-child(2) {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
+      align-items: none;
+      flex-direction: row; }
+      .index__container .product div:nth-child(2) div:nth-child(1) {
+        width: 45%; }
+      .index__container .product div:nth-child(2) div:nth-child(2) {
+        width: 45%; }
+  .index__container .services {
+    padding: 15px; }
+    .index__container .services div:nth-child(1) h3 {
+      text-align: center;
+      margin-bottom: 20px; }
+    .index__container .services div:nth-child(2) {
+      display: flex;
+      justify-content: space-around;
+      align-items: none;
+      flex-direction: row; }
+      .index__container .services div:nth-child(2) div:nth-child(1) {
+        width: 45%; }
+      .index__container .services div:nth-child(2) div:nth-child(2) {
+        width: 45%; }
+  .index__container .redes {
+    width: 100%;
+    height: auto; }
+    .index__container .redes div:nth-child(1) h2 {
+      font-size: 1.5em;
+      text-align: center; }
+    .index__container .redes div:nth-child(2) {
+      display: flex;
+      justify-content: space-evenly;
       align-items: center;
-      flex-direction: column; }
-      .catalogue div .pastas h3 {
-        font-size: 2em;
-        margin-top: 5px;
-        border-radius: 10%; }
-    .catalogue div .dulces {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, black 100%), url(../img/cake.jpg); }
-      .catalogue div .dulces h3 {
-        font-size: 2em;
-        margin-top: 5px;
-        margin-bottom: 40px; }
-    .catalogue div .saladitos {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, black 100%), url(../img/miga.jpg); }
-      .catalogue div .saladitos h3 {
-        font-size: 2em;
-        margin-top: 5px;
-        margin-bottom: 30px; }
-
-/** SERVICES */
-.services__container {
-  background-color: #1e1e1e;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 15vh 215vh 50vh 3vh;
-  grid-template-areas: "header" "cards" "footer" "copy"; }
-
-.services__cards {
-  grid-area: cards;
-  text-align: center; }
-  .services__cards h1 {
-    font-size: 2.2em;
-    font-weight: bold;
-    padding: 20px 10px 20px 10px; }
-  .services__cards h3 {
-    font-size: 1em;
-    padding: 0px 10px 0px 10px; }
-  .services__cards div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column; }
-    .services__cards div .casamiento {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%), url(../img/casamiento.jpg);
-      margin: 30px 0px 20px 0px; }
-      .services__cards div .casamiento h4 {
-        font-size: 1.7em;
-        margin-top: 5px;
-        border-radius: 10px; }
-    .services__cards div .aniversario {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%), url(../img/aniversario.jpg);
-      margin-bottom: 20px; }
-      .services__cards div .aniversario h4 {
-        font-size: 1.7em;
-        margin-top: 5px;
-        border-radius: 10px; }
-    .services__cards div .egreso {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%), url(../img/graduacion.jpg);
-      margin-bottom: 20px; }
-      .services__cards div .egreso h4 {
-        font-size: 1.7em;
-        margin-top: 5px;
-        border-radius: 10px; }
-    .services__cards div .comunion {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%), url(../img/comunion.jpg);
-      margin-bottom: 20px; }
-      .services__cards div .comunion h4 {
-        font-size: 1.7em;
-        margin-top: 5px;
-        border-radius: 10px; }
-    .services__cards div .evGenerales {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%), url(../img/eg.jpg); }
-      .services__cards div .evGenerales h4 {
-        font-size: 1.6em;
-        margin-top: 5px;
-        border-radius: 10px; }
+      flex-direction: row; }
+      .index__container .redes div:nth-child(2) a img {
+        width: 64px; }
+  .index__container .general__footer {
+    margin-top: 30px; }
+    .index__container .general__footer .whatsapp a {
+      text-decoration: none;
+      color: #f0f0f0; }
+      .index__container .general__footer .whatsapp a img {
+        margin-right: 10px;
+        width: 32px; }
+    .index__container .general__footer .contact {
+      display: none; }
+    .index__container .general__footer .address {
+      display: none; }
+    .index__container .general__footer .gmap {
+      padding-top: 30px; }
 
 .general__footer {
   grid-area: footer;

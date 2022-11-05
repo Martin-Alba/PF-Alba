@@ -1,9 +1,13 @@
 header{
     grid-area: header;
     .bg-light {
-        background-color: rgb(240, 240, 240) !important;
+        background-color: rgb(5, 5, 5) !important;
     }
     
+    .navbar-light .navbar-toggler-icon{
+        background-image: url(../img/navBar.png);
+    }
+
     .navbar-light .navbar-brand {
         color: $color-rosita;
         font-family: 'Dancing Script', cursive;
@@ -22,7 +26,7 @@ header{
     
     .navbar-light .navbar-nav .nav-link.active,
     .navbar-light .navbar-nav .show .nav-link {
-        color: $color-oscuro;
+        color: $color-letras;
         font-size: 1.2em;
     }
     
@@ -31,7 +35,7 @@ header{
     }
     
     .navbar-light .navbar-nav .nav-link {
-        color: $color-oscuro;
+        color: $color-letras;
         font-size: 1.2em;
         font-weight: bold;
     }

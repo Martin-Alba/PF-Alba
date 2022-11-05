@@ -1,4 +1,5 @@
 /**! Mobile */
+
 .fixed{
     display: none;
 }
@@ -18,415 +19,152 @@
 .index__container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 13vh 87vh 30vh 57vh 69vh 15vh 47vh 3vh;
+    grid-template-rows: 13vh auto auto 3vh;
     grid-template-areas:
     "header"
-    "hero"
-    "somos"
-    "product"
-    "services"
-    "redes"
+    "main"
     "footer"
     "copy"
     ;
     background-color: $color-oscuro;
-}
-
-.hero{
-    grid-area: hero;
-    height: 87vh;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%), url(../img/webMain.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    @extend %flex;
-    h1{
-        font-size: 2.5em;
-        font-weight: bold;
-        text-align: center;
-    }
-}
-
-.somos{
-    grid-area: somos;
-    @extend %flex-row;
-    padding: 30px 10px 30px 10px;
-    div:nth-child(1){
-        img{
-            height: 140px;
-            width: 140px;
-            border-radius: 10px;
-            @extend %shadow;
-        }
-    }
-    div:nth-child(2){
-        div{
-            text-align: center;
-            padding-left: 5px;
-            h2{
-                font-size: 2em;
-            }
-            p{
-                font-size: 1em;
-            }
-        }
-    }
-}
-
-.product{
-    grid-area: product;
-    .product--text{
-        padding: 0px 10px 0px 10px;
-        h2{
-            text-align: center;
-            font-size: 2em;
+    .hero{
+        height: calc(100vh - 106px);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%), url(../img/webMain.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @extend %flex;
+        h1{
+            font-size: 2.5em;
             font-weight: bold;
+            text-align: center;
         }
     }
-    .product--imgs{
-        @include flex(flex, space-evenly, none, row);
+    .somos{
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        @include flex(flex, space-between, center, row);
         div:nth-child(1){
+            padding-right: 5px;
+            width: 100%;
             img{
-                @extend %proServ-index;
+                @extend %img-index;
                 @extend %shadow;
             }
         }
         div:nth-child(2){
-            img{
-                @extend %proServ-index;
-                @extend %shadow;
-            }
-        }
-    }
-}
-
-.services{
-    padding-top: 35px;
-    grid-area: services;
-    div{
-        h2{
-            @extend %subT-index;
-        }
-        h3{
-            padding: 0px 10px 0px 10px;
-            text-align: center;
-        }
-        p{
-            padding: 0px 10px 0px 10px;
-        }
-    }
-    .services--imgs{
-        @include flex(flex, space-evenly, center, row);
-        div:nth-child(1){
-            img{
-                @extend %proServ-index;
-                @extend %shadow;
-            }
-        }
-        div:nth-child(2){
-            img{
-                @extend %proServ-index;
-                @extend %shadow;
-            }
-        }
-    }
-}
-
-.redes{
-    grid-area: redes;
-    padding-top: 10px;
-    div:nth-child(1){
-        h2{
-            text-align: center;
-        }
-    }
-    div:nth-child(2){
-        @include flex(flex, space-evenly, none, row);
-    }
-}
-
-/**! ABOUT */
-
-.about__container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 13vh auto 50vh 3vh;
-    grid-template-areas: 
-    "header"
-    "history"
-    "footer"
-    "copy"
-    ;
-    background-color: $color-oscuro;
-}
-
-.history{
-    grid-area: history;
-    font-family: 'Dancing Script', cursive;
-    padding: 0px 10px 0px 10px;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.3) 100%), url(../img/webMain.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    h1{
-        font-size: 3em;
-        font-weight: bold;
-        text-align: center;
-        padding-top: 20px;
-    }
-    div{
-        font-size: 1.4em;
-    }
-}
-
-/**! CONTACTO */
-
-.contact__container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15vh auto 50vh 3vh;
-    grid-template-areas: 
-    "header"
-    "contact"
-    "footer"
-    "copy"
-    ;
-    background-color: $color-oscuro;
-}
-
-.contact__form{
-    @include flex (flex, center, center, none);
-    padding: 30px 0px 30px 0px;
-    div{
-        width: 320px;
-        background-color: $color-letras;
-        form{
-            padding-left: 10px;
-            h1{
-                color: $color-rosita;
-                font-size: 2em;
-                font-weight: 600;
-            }
-            p{
-                color: $color-oscuro;
-                padding-right: 10px;
-            }
-            fieldset{
-                padding: 0px 10px 10px 0px;
-                input{
-                    border: none;
-                    width: 100%;
-                    background-color: $color-letras;
-                    &:focus-visible{
-                        outline: none;
-                    }
-                }
-            }
-            select{
-                background-color: $color-letras;
-                padding: 5px;
-                &:focus-visible{
-                    outline: none;
-                }
-            }
-            textarea{
-                background-color: $color-letras;
-                margin-top: 10px;
-                border: none;
-                resize: none;
-                height: 150px;
-                width: 100%;
-                &:focus-visible{
-                    outline: none;
-                }
-            }
-            div{
-                width: 100%;
-                padding: 0px 10px 10px 0px;
-                button{
-                    background-color: $color-rosita;
-                    width: 100%;
-                    border: none;
-                    padding: 5px;
+            width: 100%;
+            padding-left: 5px;
+            .somos--text{
+                h2{
+                    text-align: center;
+                    font-size: 1.15em;
                     font-weight: bold;
-                    color: $color-letras;
                 }
-            }
-            
-        }
-    }
-}
-
-/**! PRODUCT */
-
-.product__container{
-    background-color: $color-oscuro;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15vh 130vh 50vh 3vh;
-    grid-template-areas: 
-    "header"
-    "product"
-    "footer"
-    "copy"
-    ;
-}
-
-.catalogue{
-    grid-area: product;
-    h1{
-        font-size: 2em;
-        font-weight: bold;
-        padding: 20px 10px 20px 10px;
-        text-align: center;
-    }
-    div{
-        @include flex (flex, space-evenly, center, column);
-        height: 120vh;
-        .pastas{
-            @extend %size-mobile;
-            @extend %backg-card;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 1) 100%), url(../img/spaghetti.jpg);
-            background-position: center;
-            @extend %shadow;
-            @include flex(flex, center, center, column);
-            h3{
-                font-size: 2em;
-                margin-top: 5px;
-                border-radius: 10%;
-            }
-            div{
                 p{
-                    @extend %pServ;
+                    text-align: center;
+                    font-size: 1em;
                 }
             }
         }
-        .dulces{
-            @extend %size-mobile;
-            @extend %backg-card;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 1) 100%), url(../img/cake.jpg);
-            @extend %shadow;
-            h3{
-                font-size: 2em;
-                margin-top: 5px;
-                margin-bottom: 40px;
+    }
+    .product{
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        div:nth-child(1){
+            h2{
+                @extend %h2-font;
             }
-            div{
-                p{
-                    @extend %pServ;
+        }
+        div:nth-child(2){
+            @include flex(flex, space-around, none, row);
+            div:nth-child(1){
+                width: 45%;
+                img{
+                    @extend %img-index;
+                    @extend %shadow;
+                }
+            }
+            div:nth-child(2){
+                width: 45%;
+                img{
+                    @extend %img-index;
+                    @extend %shadow;
                 }
             }
         }
-        .saladitos{
-            @extend %size-mobile;
-            @extend %backg-card;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 1) 100%), url(../img/miga.jpg);
-            @extend %shadow;
+    }
+    .services{
+        padding: 15px;
+        div:nth-child(1){
+            h2{
+                @extend %h2-font;
+            }
             h3{
-                font-size: 2em;
-                margin-top: 5px;
-                margin-bottom: 30px;
+                text-align: center;
+                margin-bottom: 20px;
             }
-            p{
-                @extend %pServ;
+        }
+        div:nth-child(2){
+            @include flex(flex, space-around, none, row);
+            div:nth-child(1){
+                width: 45%;
+                img{
+                    @extend %img-index;
+                    @extend %shadow;
+                }
             }
+            div:nth-child(2){
+                width: 45%;
+                img{
+                    @extend %img-index;
+                    @extend %shadow;
+                }
+            }
+        }
+    }
+    .redes{
+        width: 100%;
+        height: auto;
+        div:nth-child(1){
+            h2{
+                font-size: 1.5em;
+                text-align: center;
+            }
+        }
+        div:nth-child(2){
+            @include flex(flex, space-evenly, center, row);
+            a{
+                img{
+                    width: 64px;
+                }
+            }
+        }
+    }
+    .general__footer{
+        margin-top: 30px;
+        .whatsapp{
+            @extend %flex;
+            a{
+                text-decoration: none;
+                color: $color-letras;
+                img{
+                    margin-right: 10px;
+                    width: 32px;
+                }
+            }
+        }
+        .contact{
+            display: none;
+        }
+        .address{
+            display: none;
+        }
+        .gmap{
+            padding-top: 30px;
         }
     }
 }
 
-/** SERVICES */
-
-.services__container{
-    background-color: $color-oscuro;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15vh 215vh 50vh 3vh;
-    grid-template-areas: 
-    "header"
-    "cards"
-    "footer"
-    "copy"
-    ;
-}
-
-.services__cards{
-    grid-area: cards;
-    text-align: center;
-    h1{
-        font-size: 2.2em;
-        font-weight: bold;
-        padding: 20px 10px 20px 10px;
-    }
-    h3{
-        font-size: 1em;
-        padding: 0px 10px 0px 10px;
-    }
-    div{
-        @include flex(flex, space-around, center, column);
-        .casamiento{
-            @extend %size-mobile;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 1) 100%), url(../img/casamiento.jpg);
-            @extend %backg-card;
-            @extend %flex-start;
-            @extend %shadow;
-            margin: 30px 0px 20px 0px;
-            h4{
-                font-size: 1.7em;
-                margin-top: 5px;
-                border-radius: 10px;
-            }
-        }
-        .aniversario{
-            @extend %size-mobile;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 1.0) 100%), url(../img/aniversario.jpg);
-            @extend %backg-card;
-            @extend %flex-start;
-            @extend %shadow;
-            margin-bottom: 20px;
-            h4{
-                font-size: 1.7em;
-                margin-top: 5px;
-                border-radius: 10px;
-            }
-        }
-        .egreso{
-            @extend %size-mobile;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 1.0) 100%), url(../img/graduacion.jpg);
-            @extend %backg-card;
-            @extend %flex-start;
-            @extend %shadow;
-            margin-bottom: 20px;
-            h4{
-                font-size: 1.7em;
-                margin-top: 5px;
-                border-radius: 10px;
-            }
-        }
-        .comunion{
-            @extend %size-mobile;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 1.0) 100%), url(../img/comunion.jpg);
-            @extend %backg-card;
-            @extend %flex-start;
-            @extend %shadow;
-            margin-bottom: 20px;
-            h4{
-                font-size: 1.7em;
-                margin-top: 5px;
-                border-radius: 10px;
-            }
-        }
-        .evGenerales{
-            @extend %size-mobile;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 1.0) 100%), url(../img/eg.jpg);
-            @extend %backg-card;
-            @extend %flex-start;
-            @extend %shadow;
-            h4{
-                font-size: 1.6em;
-                margin-top: 5px;
-                border-radius: 10px;
-            }
-        }
-    }
-}
