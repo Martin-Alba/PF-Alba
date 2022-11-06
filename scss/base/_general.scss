@@ -8,10 +8,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-img{
-    width: 300px;
-    height: auto;
-}
 
 span{
     color: $color-rosita;
@@ -24,6 +20,47 @@ body{
 
 main{
     grid-area: main;
+}
+
+/**! TARJETAS */
+
+.card{
+    @extend %cards;
+    margin: 10px;
+    &:hover{
+        .front{
+            transform: perspective(600px) rotateY(180deg);
+        }
+        .back{
+            transform: perspective(600px) rotateY(360deg);
+        }
+    }
+}
+.face{
+    @extend %cards-face;
+}
+.front{
+    @extend %cards-front;
+    
+    img{
+        @extend %cards-img;
+    }
+    h2{
+        @extend %cards-h2;
+    }
+
+}
+.back{
+    @extend %cards-back;
+    h3{
+        @extend %cards-back-h3;
+    }
+    div{
+        @extend %cards-div;
+        p{
+            @extend %cards-p;
+        }
+    }
 }
 
 .general__boton{
@@ -50,6 +87,36 @@ main{
     }
 }
 
+/**! FOOTER */
+
+.general__footer{
+    margin-top: 15px;
+    .whatsapp{
+        @extend %flex;
+        a{
+            text-decoration: none;
+            color: $color-letras;
+            img{
+                margin: 0px 10px 10px 0px;
+                width: 32px;
+            }
+        }
+    }
+    .contact{
+        display: none;
+    }
+    .about{
+        display: none;
+    }
+    .address{
+        display: none;
+    }
+    .gmap{
+        padding-top: 30px;
+    }
+}
+
+/**! COPY & FIXED */
 
 .general__copy{
     grid-area: copy;
@@ -61,4 +128,3 @@ main{
     left: 1%;
     bottom: 3%;
 }
-

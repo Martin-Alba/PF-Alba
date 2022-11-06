@@ -4,16 +4,6 @@
     display: none;
 }
 
-.general__footer{
-    .address{
-        display: none;
-    }
-
-    .about{
-        display: none;
-    }
-}
-
 /**! INDEX */ 
 
 .index__container{
@@ -143,27 +133,61 @@
             }
         }
     }
-    .general__footer{
-        margin-top: 30px;
-        .whatsapp{
-            @extend %flex;
-            a{
-                text-decoration: none;
-                color: $color-letras;
-                img{
-                    margin-right: 10px;
-                    width: 32px;
-                }
-            }
+}
+
+/**! ABOUT */
+
+.about__container{
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13vh auto auto 3vh;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    "copy"
+    ;
+    background-color: $color-oscuro;
+    .history{
+        padding: 15px;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 100%), url(../img/webMain.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        h1{
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            text-align: center;
         }
-        .contact{
-            display: none;
-        }
-        .address{
-            display: none;
-        }
-        .gmap{
-            padding-top: 30px;
+    }
+}
+
+/**! CONTACT*/
+
+/**! PRODUCT */
+
+.product__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13vh auto auto 3vh;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    "copy"
+    ;
+    background-color: $color-oscuro;
+    .catalogue{
+        padding: 15px;
+        color: $color-oscuro;
+        @include flex(flex, space-evenly, center, column);
+        h1{
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            color: $color-letras;
+            padding: 15px 0px 30px 0px;
         }
     }
 }

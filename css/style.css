@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Raleway:ital,wght@0,100;0,300;0,800;1,100;1,300;1,800&display=swap");
-.general__boton, .index__container .hero, .index__container .general__footer .whatsapp {
+.general__boton, .general__footer .whatsapp, .index__container .hero {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -11,6 +11,70 @@
 .general__footer .contact div:nth-child(2) div:nth-child(1), .general__footer .contact div:nth-child(2) div:nth-child(2), .general__footer .contact div:nth-child(2) div:nth-child(3), .general__footer .contact div:nth-child(2) div:nth-child(4), .general__footer .about div:nth-child(2), .general__footer .address .address--data {
   display: flex;
   flex-direction: row; }
+
+/**! CARD */
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background-color: #111111; }
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s; }
+
+.front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px; }
+
+.front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.front h2 {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #f0f0f0;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center; }
+
+.back {
+  transform: perspective(600px) rotateY(180deg);
+  background-image: url(../img/pattern.jpg);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000; }
+
+.back h3 {
+  color: #f74d9c;
+  font-size: 2em;
+  font-weight: bold;
+  border-bottom: 2px solid #111111; }
+
+.back div {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+
+.back div p {
+  color: #f0f0f0;
+  font-size: 1.2em; }
 
 /**! MOBILE */
 .index__container .somos div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(2) img, .index__container .services div:nth-child(2) div:nth-child(1) img, .index__container .services div:nth-child(2) div:nth-child(2) img {
@@ -36,10 +100,6 @@
   padding: 0;
   box-sizing: border-box; }
 
-img {
-  width: 300px;
-  height: auto; }
-
 span {
   color: #f694c1; }
 
@@ -49,6 +109,14 @@ body {
 
 main {
   grid-area: main; }
+
+/**! TARJETAS */
+.card {
+  margin: 10px; }
+  .card:hover .front {
+    transform: perspective(600px) rotateY(180deg); }
+  .card:hover .back {
+    transform: perspective(600px) rotateY(360deg); }
 
 .general__boton {
   width: 100%;
@@ -70,6 +138,25 @@ main {
       color: #111111;
       border-radius: 30px 8px 30px 8px; }
 
+/**! FOOTER */
+.general__footer {
+  margin-top: 15px; }
+  .general__footer .whatsapp a {
+    text-decoration: none;
+    color: #f0f0f0; }
+    .general__footer .whatsapp a img {
+      margin: 0px 10px 10px 0px;
+      width: 32px; }
+  .general__footer .contact {
+    display: none; }
+  .general__footer .about {
+    display: none; }
+  .general__footer .address {
+    display: none; }
+  .general__footer .gmap {
+    padding-top: 30px; }
+
+/**! COPY & FIXED */
 .general__copy {
   grid-area: copy;
   text-align: center; }
@@ -110,12 +197,6 @@ header {
 
 /**! Mobile */
 .fixed {
-  display: none; }
-
-.general__footer .address {
-  display: none; }
-
-.general__footer .about {
   display: none; }
 
 /**! INDEX */
@@ -196,20 +277,47 @@ header {
       flex-direction: row; }
       .index__container .redes div:nth-child(2) a img {
         width: 64px; }
-  .index__container .general__footer {
-    margin-top: 30px; }
-    .index__container .general__footer .whatsapp a {
-      text-decoration: none;
-      color: #f0f0f0; }
-      .index__container .general__footer .whatsapp a img {
-        margin-right: 10px;
-        width: 32px; }
-    .index__container .general__footer .contact {
-      display: none; }
-    .index__container .general__footer .address {
-      display: none; }
-    .index__container .general__footer .gmap {
-      padding-top: 30px; }
+
+/**! ABOUT */
+.about__container {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: 1fr;
+  grid-template-rows: 13vh auto auto 3vh;
+  grid-template-areas: "header" "main" "footer" "copy";
+  background-color: #111111; }
+  .about__container .history {
+    padding: 15px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 100%), url(../img/webMain.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .about__container .history h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3em;
+      text-align: center; }
+
+/**! CONTACT*/
+/**! PRODUCT */
+.product__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 13vh auto auto 3vh;
+  grid-template-areas: "header" "main" "footer" "copy";
+  background-color: #111111; }
+  .product__container .catalogue {
+    padding: 15px;
+    color: #111111;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column; }
+    .product__container .catalogue h1 {
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+      color: #f0f0f0;
+      padding: 15px 0px 30px 0px; }
 
 .general__footer {
   grid-area: footer;

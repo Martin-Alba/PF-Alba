@@ -32,6 +32,78 @@ $color-oscuro: rgb(17, 17, 17);
     flex-direction: $direction;
 }
 
+/**! CARD */
+%cards{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background-color: $color-oscuro;
+}
+
+%cards-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+%cards-front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px;
+}
+
+%cards-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+%cards-h2{
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: rgb(240, 240, 240);
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+%cards-back{
+    transform: perspective(600px) rotateY(180deg);
+    background-image: url(../img/pattern.jpg);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+%cards-back-h3{
+    color: $color-rositabg; 
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(17, 17, 17);
+}
+
+%cards-div{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+%cards-p{
+    color: rgb(240, 240, 240);
+    font-size: 1.2em;
+}
 /**! MOBILE */ 
 
 %img-index{
