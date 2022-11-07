@@ -24,6 +24,14 @@ $color-oscuro: rgb(17, 17, 17);
     justify-content: flex-start;
 }
 
+%rotate-izq{
+    transform: rotate3d(0, 1, 0, 30deg);
+}
+
+%rotate-der{
+    transform: rotate3d(0, 1, 0, -30deg);
+}
+
 
 @mixin flex ($flex, $justify, $align, $direction){
     display: $flex;
@@ -33,6 +41,7 @@ $color-oscuro: rgb(17, 17, 17);
 }
 
 /**! CARD */
+
 %cards{
     position: relative;
     width: 300px;
@@ -103,6 +112,14 @@ $color-oscuro: rgb(17, 17, 17);
 %cards-p{
     color: rgb(240, 240, 240);
     font-size: 1.2em;
+}
+
+%cards-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 /**! MOBILE */ 
 

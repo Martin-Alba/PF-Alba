@@ -63,6 +63,8 @@ main{
     }
 }
 
+/**! BOTON */
+
 .general__boton{
     width: 100%;
     padding-top: 30px;
@@ -83,6 +85,76 @@ main{
             background-position: right;
             color: $color-oscuro;
             border-radius: 30px 8px 30px 8px;
+        }
+    }
+}
+
+/**! FORM */
+
+.contact__form{
+    @include flex (flex, center, center, none);
+    padding: 30px 0px 30px 0px;
+    div{
+        width: 320px;
+        background-color: $color-letras;
+        border-radius: 10px;
+        form{
+            padding-left: 10px;
+            h1{
+                color: $color-rosita;
+                font-size: 2em;
+                font-weight: 600;
+            }
+            p{
+                color: $color-oscuro;
+                padding-right: 10px;
+            }
+            fieldset{
+                padding: 0px 10px 10px 0px;
+                input{
+                    border: none;
+                    width: 100%;
+                    background-color: $color-letras;
+                    &:focus-visible{
+                        outline: none;
+                    }
+                }
+            }
+            select{
+                background-color: $color-letras;
+                padding: 5px;
+                &:focus-visible{
+                    outline: none;
+                }
+            }
+            textarea{
+                background-color: $color-letras;
+                margin-top: 10px;
+                border: none;
+                resize: none;
+                height: 150px;
+                width: 100%;
+                &:focus-visible{
+                    outline: none;
+                }
+            }
+            div{
+                width: 100%;
+                padding: 0px 10px 10px 0px;
+                button{
+                    background-color: $color-rosita;
+                    width: 100%;
+                    border: none;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: $color-letras;
+                    border-radius: 10px;
+                    &:hover{
+                        background-color: rgb(197, 70, 129);
+                    }
+                }
+            }
+            
         }
     }
 }

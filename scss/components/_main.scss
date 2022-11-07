@@ -34,10 +34,13 @@
         width: 100%;
         height: auto;
         padding: 15px;
+        perspective: 600px;
         @include flex(flex, space-between, center, row);
         div:nth-child(1){
             padding-right: 5px;
             width: 100%;
+            @extend %rotate-izq;
+            
             img{
                 @extend %img-index;
                 @extend %shadow;
@@ -70,8 +73,10 @@
         }
         div:nth-child(2){
             @include flex(flex, space-around, none, row);
+            perspective: 600px;
             div:nth-child(1){
                 width: 45%;
+                @extend %rotate-izq;
                 img{
                     @extend %img-index;
                     @extend %shadow;
@@ -79,6 +84,7 @@
             }
             div:nth-child(2){
                 width: 45%;
+                @extend %rotate-der;
                 img{
                     @extend %img-index;
                     @extend %shadow;
@@ -99,8 +105,10 @@
         }
         div:nth-child(2){
             @include flex(flex, space-around, none, row);
+            perspective: 600px;
             div:nth-child(1){
                 width: 45%;
+                @extend %rotate-izq;
                 img{
                     @extend %img-index;
                     @extend %shadow;
@@ -108,6 +116,7 @@
             }
             div:nth-child(2){
                 width: 45%;
+                @extend %rotate-der;
                 img{
                     @extend %img-index;
                     @extend %shadow;
@@ -165,6 +174,22 @@
 
 /**! CONTACT*/
 
+.contact__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13vh auto auto 3vh;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    "copy"
+    ;
+    background-color: $color-oscuro;
+    .contact__form{
+        height: calc(100vh - 367px);
+    }
+}
+
 /**! PRODUCT */
 
 .product__container{
@@ -178,10 +203,7 @@
     "copy"
     ;
     background-color: $color-oscuro;
-    .catalogue{
-        padding: 15px;
-        color: $color-oscuro;
-        @include flex(flex, space-evenly, center, column);
+    .nuestros__productos{
         h1{
             font-size: 2em;
             font-weight: bold;
@@ -190,5 +212,57 @@
             padding: 15px 0px 30px 0px;
         }
     }
+    .catalogue{
+        padding: 15px;
+        color: $color-oscuro;
+        @include flex(flex, space-evenly, center, column);
+    }
 }
 
+/** SERVICES */
+
+.services__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13vh auto auto 3vh;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    "copy"
+    ;
+    background-color: $color-oscuro;
+    .nuestros__servicios{
+        padding: 15px;
+        div{
+            h1{
+                color: $color-letras;
+                text-align: center;
+                font-size: 2em;
+                font-weight: bold;
+                padding-top: 15px;
+            }
+            h3{
+                color: $color-letras;
+                font-size: 1.2em;
+            }
+        }
+    }
+    .services__cards{
+        color: $color-oscuro;
+        padding: 15px;
+        .cards__container{
+            width: 100%;
+            @include flex(flex, space-evenly, center, column);
+            .card{
+                .back{
+                    h3{
+                        color: $color-rositabg;
+                        font-weight: bold;
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
