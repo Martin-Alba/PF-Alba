@@ -24,6 +24,11 @@ $color-oscuro: rgb(17, 17, 17);
     justify-content: flex-start;
 }
 
+%flex-end{
+    display: flex;
+    justify-content: flex-end;
+}
+
 %rotate-izq{
     transform: rotate3d(0, 1, 0, 30deg);
 }
