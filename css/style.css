@@ -8,6 +8,10 @@
   display: flex;
   flex-direction: column; }
 
+.general__footer .address .address--data {
+  display: flex;
+  flex-direction: row; }
+
 .index__container .product div:nth-child(2) div:nth-child(2), .index__container .services div:nth-child(2) div:nth-child(2) {
   display: flex;
   justify-content: flex-start; }
@@ -465,6 +469,17 @@ header {
           font-size: 0.9em; }
           .general__footer .menu div:nth-child(2) ul li a:hover {
             color: #f694c1; }
+  .general__footer .address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    padding: 5px; }
+    .general__footer .address div:nth-child(1) h2 {
+      font-size: 1em; }
+    .general__footer .address .address--data div:nth-child(2) p {
+      font-size: 0.9em; }
   .general__footer .gmap {
     display: flex;
     justify-content: center;
@@ -482,6 +497,10 @@ header {
 .index__container .somos div:nth-child(2) .somos--text {
   display: flex;
   flex-direction: column; }
+
+.general__footer .address .address--data {
+  display: flex;
+  flex-direction: row; }
 
 .index__container .product div:nth-child(2) div:nth-child(2), .index__container .services div:nth-child(2) div:nth-child(2) {
   display: flex;
@@ -696,3 +715,23 @@ header {
 /** SERVICES */
 .nuestros__servicios div:nth-child(1) h1 {
   font-size: 3.5em; }
+
+@media screen and (min-width: 1280px) {
+  /**! GENERAL */
+  .general__footer .address {
+    display: flex; }
+  /**! INDEX */
+  .index__container .hero h1 {
+    font-size: 4em; }
+  .index__container .somos div:nth-child(1) img {
+    width: 70%; }
+  .index__container .somos div:nth-child(2) .somos--text h2 {
+    font-size: 2.5em; }
+  .index__container .product div:nth-child(2) div:nth-child(1) img {
+    width: 70%; }
+  .index__container .product div:nth-child(2) div:nth-child(2) img {
+    width: 70%; }
+  .index__container .services div:nth-child(2) div:nth-child(1) img {
+    width: 70%; }
+  .index__container .services div:nth-child(2) div:nth-child(2) img {
+    width: 70%; } }

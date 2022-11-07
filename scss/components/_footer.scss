@@ -32,22 +32,24 @@
             }
         }
     }
-    // .address{
-    //     @extend %flex-col;
-    //     div{
-    //         h2{
-    //             font-size: 1em;
-    //         }
-    //     }
-    //     .address--data{
-    //         @extend %flex-row;
-    //         div:nth-child(2){
-    //             p{
-    //                 font-size: 0.9em;
-    //             }
-    //         }
-    //     }
-    // }
+    .address{
+        @include flex(flex, center, center, column);
+        height: 200px;
+        padding: 5px;
+        div:nth-child(1){
+            h2{
+                font-size: 1em;
+            }
+        }
+        .address--data{
+            @extend %flex-row;
+            div:nth-child(2){
+                p{
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
     .gmap{
         @include flex(flex, center, center, none);
         padding-top: 10px;

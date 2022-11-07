@@ -229,3 +229,66 @@
         }
     }
 }
+
+@media screen and (min-width:1280px){
+    
+    /**! GENERAL */
+
+    .general__footer{
+        .address{
+            display: flex;
+        }
+    }
+
+    /**! INDEX */
+
+    .index__container{
+        .hero{
+            h1{
+                font-size: 4em;
+            }
+        }
+        .somos{
+            div:nth-child(1){
+                img{
+                    width: 70%;
+                }
+            }
+            div:nth-child(2){
+                .somos--text{
+                    h2{
+                        font-size: 2.5em;
+                    }
+                }
+            }
+        }
+        .product{
+            div:nth-child(2){
+                div:nth-child(1){
+                    img{
+                        width: 70%;
+                    }
+                }
+                div:nth-child(2){
+                    img{
+                        width: 70%;
+                    }
+                }
+            }
+        }
+        .services{
+            div:nth-child(2){
+                div:nth-child(1){
+                    img{
+                        width: 70%;
+                    }
+                }
+                div:nth-child(2){
+                    img{
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
