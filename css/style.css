@@ -735,3 +735,33 @@ header {
     width: 70%; }
   .index__container .services div:nth-child(2) div:nth-child(2) img {
     width: 70%; } }
+
+@media screen and (min-width: 1600px) {
+  /**! INDEX */
+  .index__container .hero h1 {
+    font-size: 4em; }
+  .index__container .somos div:nth-child(1) img {
+    width: 60%; }
+  .index__container .somos div:nth-child(2) .somos--text h2 {
+    font-size: 2.5em; }
+  .index__container .product div:nth-child(2) div:nth-child(1) img {
+    width: 60%; }
+  .index__container .product div:nth-child(2) div:nth-child(2) img {
+    width: 60%; }
+  .index__container .services div:nth-child(2) div:nth-child(1) img {
+    width: 60%; }
+  .index__container .services div:nth-child(2) div:nth-child(2) img {
+    width: 60%; }
+  /**! ABOUT */
+  .about__container .history {
+    height: calc(100vh - 371px);
+    padding: 30px 100px; }
+  /**! CONTACT */
+  .contact__container .contact__form {
+    height: calc(100vh - 371px); }
+  /**! PRODUCT */
+  .product__container main {
+    height: calc(100vh - 371px); }
+  /**! SERVICES */
+  .services__container main {
+    height: calc(100vh - 371px); } }
