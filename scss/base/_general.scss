@@ -28,6 +28,9 @@ main{
     @extend %cards;
     margin: 10px;
     &:hover{
+        .face{
+            @extend %cards-face;
+        }
         .front{
             transform: perspective(600px) rotateY(180deg);
         }

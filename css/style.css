@@ -33,7 +33,7 @@ header .collapse, .index__container .somos div:nth-child(1), .index__container .
   height: 350px;
   background-color: #111111; }
 
-.face {
+.card:hover .face, .face {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -588,7 +588,7 @@ header .collapse, .index__container .somos div:nth-child(1), .index__container .
   height: 350px;
   background-color: #111111; }
 
-.face {
+.card:hover .face, .face {
   position: absolute;
   width: 100%;
   height: 100%;
