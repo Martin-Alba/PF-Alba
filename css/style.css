@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Raleway:ital,wght@0,100;0,300;0,800;1,100;1,300;1,800&display=swap");
-.general__boton, .general__footer .whatsapp, .index__container .hero {
+.general__boton, .general__footer .whatsapp, .index__container .hero, .contact__container main .contact__data .contactInfo .box .icon, .contact__container main .contact__data .contactInfo .box .icon a {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: flex-start; }
 
-.index__container .somos div:nth-child(1), .index__container .product div:nth-child(2) div:nth-child(1), .index__container .services div:nth-child(2) div:nth-child(1) {
+header .collapse, .index__container .somos div:nth-child(1), .index__container .product div:nth-child(2) div:nth-child(1), .index__container .services div:nth-child(2) div:nth-child(1) {
   display: flex;
   justify-content: flex-end; }
 
@@ -108,7 +108,7 @@
   text-align: center;
   font-weight: bold; }
 
-.index__container .somos div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(2) img, .index__container .services div:nth-child(2) div:nth-child(1) img, .index__container .services div:nth-child(2) div:nth-child(2) img {
+.fixed, .index__container .somos div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(2) img, .index__container .services div:nth-child(2) div:nth-child(1) img, .index__container .services div:nth-child(2) div:nth-child(2) img {
   box-shadow: 6px 6px 9px 2px black;
   -webkit-box-shadow: 6px 6px 9px 2px black;
   -moz-box-shadow: 6px 6px 9px 2px black; }
@@ -160,62 +160,6 @@ main {
       color: #111111;
       border-radius: 30px 8px 30px 8px; }
 
-/**! FORM */
-.contact__form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: none;
-  padding: 30px 0px 30px 0px; }
-  .contact__form div {
-    width: 320px;
-    background-color: #f0f0f0;
-    border-radius: 10px; }
-    .contact__form div form {
-      padding-left: 10px; }
-      .contact__form div form h1 {
-        color: #f694c1;
-        font-size: 2em;
-        font-weight: 600; }
-      .contact__form div form p {
-        color: #111111;
-        padding-right: 10px; }
-      .contact__form div form fieldset {
-        padding: 0px 10px 10px 0px; }
-        .contact__form div form fieldset input {
-          border: none;
-          width: 100%;
-          background-color: #f0f0f0; }
-          .contact__form div form fieldset input:focus-visible {
-            outline: none; }
-      .contact__form div form select {
-        background-color: #f0f0f0;
-        padding: 5px; }
-        .contact__form div form select:focus-visible {
-          outline: none; }
-      .contact__form div form textarea {
-        background-color: #f0f0f0;
-        margin-top: 10px;
-        border: none;
-        resize: none;
-        height: 150px;
-        width: 100%; }
-        .contact__form div form textarea:focus-visible {
-          outline: none; }
-      .contact__form div form div {
-        width: 100%;
-        padding: 0px 10px 10px 0px; }
-        .contact__form div form div button {
-          background-color: #f694c1;
-          width: 100%;
-          border: none;
-          padding: 5px;
-          font-weight: bold;
-          color: #f0f0f0;
-          border-radius: 10px; }
-          .contact__form div form div button:hover {
-            background-color: #c54681; }
-
 /**! FOOTER */
 .general__footer {
   margin-top: 15px; }
@@ -260,9 +204,6 @@ header {
     font-weight: bold; }
   header .navbar-light .navbar-brand:hover {
     color: #f694c1; }
-  header .collapse {
-    display: flex;
-    justify-content: flex-end; }
   header .navbar-light .navbar-nav .nav-link.active,
   header .navbar-light .navbar-nav .show .nav-link {
     color: #f0f0f0;
@@ -417,15 +358,9 @@ header {
           border-radius: 10px;
           color: #111111;
           background-color: #f0f0f0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
           font-size: 1.75em;
           transition: 0.5s; }
           .contact__container main .contact__data .contactInfo .box .icon a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             text-decoration: none;
             color: #111111; }
         .contact__container main .contact__data .contactInfo .box .text {
@@ -460,7 +395,64 @@ header {
             .contact__container main .contact__data .contactInfo .sci li a:hover {
               color: #f694c1; }
     .contact__container main .contact__form {
-      height: calc(100vh - 367px); }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: none;
+      padding: 30px 0px 30px 0px; }
+      .contact__container main .contact__form div {
+        width: 320px;
+        background-color: #f0f0f0;
+        border-radius: 10px; }
+        .contact__container main .contact__form div form {
+          padding-left: 10px; }
+          .contact__container main .contact__form div form h1 {
+            color: #f694c1;
+            font-size: 2em;
+            font-weight: 600; }
+          .contact__container main .contact__form div form p {
+            color: #111111;
+            padding-right: 10px; }
+          .contact__container main .contact__form div form fieldset {
+            padding: 0px 10px 10px 0px; }
+            .contact__container main .contact__form div form fieldset input {
+              border: none;
+              width: 100%;
+              background-color: #f0f0f0;
+              border-bottom: 2px solid #f694c1; }
+              .contact__container main .contact__form div form fieldset input:focus-visible {
+                outline: none; }
+          .contact__container main .contact__form div form select {
+            background-color: #f0f0f0;
+            padding: 5px; }
+            .contact__container main .contact__form div form select:focus-visible {
+              outline: none; }
+          .contact__container main .contact__form div form textarea {
+            background-color: #f0f0f0;
+            margin-top: 10px;
+            border: none;
+            resize: none;
+            height: 150px;
+            width: 100%;
+            border: 2px solid #f694c1;
+            border-top: 0;
+            border-left: 0;
+            border-radius: 0px 0px 10px 0px; }
+            .contact__container main .contact__form div form textarea:focus-visible {
+              outline: none; }
+          .contact__container main .contact__form div form div {
+            width: 100%;
+            padding: 0px 10px 10px 0px; }
+            .contact__container main .contact__form div form div button {
+              background-color: #f694c1;
+              width: 100%;
+              border: none;
+              padding: 5px;
+              font-weight: bold;
+              color: #f0f0f0;
+              border-radius: 10px; }
+              .contact__container main .contact__form div form div button:hover {
+                background-color: #c54681; }
 
 /**! PRODUCT */
 .product__container {
@@ -527,7 +519,6 @@ header {
     border: 1px solid #f694c1;
     border-radius: 10px;
     padding: 5px;
-    order: -1;
     width: 200px;
     height: 200px; }
     .general__footer .menu div:nth-child(1) h2 {
@@ -563,7 +554,7 @@ header {
     .general__footer .gmap iframe {
       border-radius: 10px; }
 
-.general__boton, .general__footer .whatsapp, .index__container .hero {
+.general__boton, .general__footer .whatsapp, .index__container .hero, .contact__container main .contact__data .contactInfo .box .icon, .contact__container main .contact__data .contactInfo .box .icon a {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -580,7 +571,7 @@ header {
   display: flex;
   justify-content: flex-start; }
 
-.index__container .somos div:nth-child(1), .index__container .product div:nth-child(2) div:nth-child(1), .index__container .services div:nth-child(2) div:nth-child(1) {
+header .collapse, .index__container .somos div:nth-child(1), .index__container .product div:nth-child(2) div:nth-child(1), .index__container .services div:nth-child(2) div:nth-child(1) {
   display: flex;
   justify-content: flex-end; }
 
@@ -672,7 +663,7 @@ header {
   text-align: center;
   font-weight: bold; }
 
-.index__container .somos div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(2) img, .index__container .services div:nth-child(2) div:nth-child(1) img, .index__container .services div:nth-child(2) div:nth-child(2) img {
+.fixed, .index__container .somos div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(1) img, .index__container .product div:nth-child(2) div:nth-child(2) img, .index__container .services div:nth-child(2) div:nth-child(1) img, .index__container .services div:nth-child(2) div:nth-child(2) img {
   box-shadow: 6px 6px 9px 2px black;
   -webkit-box-shadow: 6px 6px 9px 2px black;
   -moz-box-shadow: 6px 6px 9px 2px black; }

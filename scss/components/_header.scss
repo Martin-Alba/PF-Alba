@@ -21,8 +21,7 @@ header{
     }
     
     .collapse {
-        display: flex;
-        justify-content: flex-end;
+        @extend %flex-end;
     }
     
     .navbar-light .navbar-nav .nav-link.active,
