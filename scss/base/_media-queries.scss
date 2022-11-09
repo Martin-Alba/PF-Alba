@@ -235,7 +235,7 @@
     /**! GENERAL */
 
     .general__footer{
-        .address{
+        div:nth-child(3){
             display: flex;
         }
     }
@@ -351,28 +351,30 @@
 
         .about__container{
             .history{
-                height: calc(100vh - 371px);
-                padding: 30px 100px;
+                padding: 41px 100px 41px 100px;
             }
         }
+
+
     /**! CONTACT */
+
     .contact__container{
         .contact__form{
-            height: calc(100vh - 371px);
+            padding-bottom: 40px;
         }
     }
     /**! PRODUCT */
 
     .product__container{
-        main{
-            height: calc(100vh - 371px);
+        .catalogue{
+            padding-bottom: 88px;
         }
     }
     /**! SERVICES */
 
     .services__container{
-        main{
-            height: calc(100vh - 371px);
+        .services__cards{
+            padding-bottom: 37px;
         }
     }
 }

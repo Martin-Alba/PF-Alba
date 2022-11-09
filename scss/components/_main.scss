@@ -1,5 +1,11 @@
 /**! Mobile */
 
+.general__footer{
+    div:nth-child(3){
+        display: none;
+    }
+}
+
 .fixed{
     display: none;
 }
@@ -185,8 +191,93 @@
     "copy"
     ;
     background-color: $color-oscuro;
-    .contact__form{
-        height: calc(100vh - 367px);
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .contact__data{
+            .contactInfo{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: $color-oscuro;
+                min-height: 500px;
+                padding-right: 10px;
+                .box{
+                    position: relative;
+                    padding: 20px 0;
+                    display: flex;
+                    cursor: pointer;
+                    &:hover{
+                        .icon{
+                            background-color: $color-rosita;
+                            color: $color-letras;
+                        }
+                    }
+                    .icon{
+                        min-width: 60px;
+                        height: 60px;
+                        border-radius: 10px;
+                        color: $color-oscuro;
+                        background-color: $color-letras;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.75em;
+                        transition: 0.5s;
+                        a{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                            color: $color-oscuro;
+                        }
+                    }
+                    .text{
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 20px;
+                        font-size: 1.1em;
+                        color: $color-letras;
+                        font-weight: 300;
+                        h3{
+                            font-weight: 500;
+                            color: $color-rosita;
+                        }
+                    }
+                }
+                .txt{
+                    color: $color-letras;
+                    margin-top: 50px;
+                    font-weight: 500;
+                    font-size: 1.5em;
+                    padding-left: 10px;
+                    border-left: 50px solid $color-rositabg;
+                    line-height: 1em;
+                }
+                .sci{
+                    position: relative;
+                    display: flex;
+                    gap: 30px;
+                    margin: 20px 0;
+                    li{
+                        list-style: none;
+                        a{
+                            color: $color-letras;
+                            font-size: 2em;
+                            transition: 0.5s;
+                            &:hover{
+                                color: $color-rosita;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contact__form{
+            height: calc(100vh - 367px);
+        }
     }
 }
 

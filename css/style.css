@@ -219,12 +219,14 @@ main {
 /**! FOOTER */
 .general__footer {
   margin-top: 15px; }
-  .general__footer .whatsapp a {
-    text-decoration: none;
-    color: #f0f0f0; }
-    .general__footer .whatsapp a img {
-      margin: 0px 10px 10px 0px;
-      width: 32px; }
+  .general__footer .whatsapp {
+    padding-right: 10px; }
+    .general__footer .whatsapp a {
+      text-decoration: none;
+      color: #f0f0f0; }
+      .general__footer .whatsapp a img {
+        margin: 0px 10px 10px 0px;
+        width: 32px; }
   .general__footer .menu {
     display: none; }
   .general__footer .about {
@@ -275,6 +277,9 @@ header {
     color: #f694c1; }
 
 /**! Mobile */
+.general__footer div:nth-child(3) {
+  display: none; }
+
 .fixed {
   display: none; }
 
@@ -386,8 +391,76 @@ header {
   grid-template-rows: 13vh auto auto 3vh;
   grid-template-areas: "header" "main" "footer" "copy";
   background-color: #111111; }
-  .contact__container .contact__form {
-    height: calc(100vh - 367px); }
+  .contact__container main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+    .contact__container main .contact__data .contactInfo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: #111111;
+      min-height: 500px;
+      padding-right: 10px; }
+      .contact__container main .contact__data .contactInfo .box {
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+        cursor: pointer; }
+        .contact__container main .contact__data .contactInfo .box:hover .icon {
+          background-color: #f694c1;
+          color: #f0f0f0; }
+        .contact__container main .contact__data .contactInfo .box .icon {
+          min-width: 60px;
+          height: 60px;
+          border-radius: 10px;
+          color: #111111;
+          background-color: #f0f0f0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.75em;
+          transition: 0.5s; }
+          .contact__container main .contact__data .contactInfo .box .icon a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #111111; }
+        .contact__container main .contact__data .contactInfo .box .text {
+          display: flex;
+          flex-direction: column;
+          margin-left: 20px;
+          font-size: 1.1em;
+          color: #f0f0f0;
+          font-weight: 300; }
+          .contact__container main .contact__data .contactInfo .box .text h3 {
+            font-weight: 500;
+            color: #f694c1; }
+      .contact__container main .contact__data .contactInfo .txt {
+        color: #f0f0f0;
+        margin-top: 50px;
+        font-weight: 500;
+        font-size: 1.5em;
+        padding-left: 10px;
+        border-left: 50px solid #f74d9c;
+        line-height: 1em; }
+      .contact__container main .contact__data .contactInfo .sci {
+        position: relative;
+        display: flex;
+        gap: 30px;
+        margin: 20px 0; }
+        .contact__container main .contact__data .contactInfo .sci li {
+          list-style: none; }
+          .contact__container main .contact__data .contactInfo .sci li a {
+            color: #f0f0f0;
+            font-size: 2em;
+            transition: 0.5s; }
+            .contact__container main .contact__data .contactInfo .sci li a:hover {
+              color: #f694c1; }
+    .contact__container main .contact__form {
+      height: calc(100vh - 367px); }
 
 /**! PRODUCT */
 .product__container {
@@ -448,7 +521,8 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: row; }
+  flex-direction: row;
+  flex-wrap: wrap; }
   .general__footer .menu {
     border: 1px solid #f694c1;
     border-radius: 10px;
@@ -718,7 +792,7 @@ header {
 
 @media screen and (min-width: 1280px) {
   /**! GENERAL */
-  .general__footer .address {
+  .general__footer div:nth-child(3) {
     display: flex; }
   /**! INDEX */
   .index__container .hero h1 {
@@ -754,14 +828,13 @@ header {
     width: 60%; }
   /**! ABOUT */
   .about__container .history {
-    height: calc(100vh - 371px);
-    padding: 30px 100px; }
+    padding: 41px 100px 41px 100px; }
   /**! CONTACT */
   .contact__container .contact__form {
-    height: calc(100vh - 371px); }
+    padding-bottom: 40px; }
   /**! PRODUCT */
-  .product__container main {
-    height: calc(100vh - 371px); }
+  .product__container .catalogue {
+    padding-bottom: 88px; }
   /**! SERVICES */
-  .services__container main {
-    height: calc(100vh - 371px); } }
+  .services__container .services__cards {
+    padding-bottom: 37px; } }

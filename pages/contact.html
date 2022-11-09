@@ -41,19 +41,62 @@
             </nav>
         </header>
         <main>
+            <section class="contact__data">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon">
+                            <a href="https://goo.gl/maps/k9bn8S6Mn1KGT8vn6" target="_blank"><ion-icon name="location-outline"></ion-icon></a>
+                        </div>
+                        <div class="text">
+                            <h3>Dirección</h3>
+                            <p>9 de Julio N° 152 <br> Serrano, Córdoba <br> CP: 6125</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <a href="https://wa.me/5493385593013" target="_blank"><ion-icon name="call-outline"></ion-icon></a>
+                        </div>
+                        <div class="text">
+                            <h3>WhatsApp</h3>
+                            <p>+54 9 3385 68-2203</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <a href="https://www.google.com/intl/es-419/gmail/about/" target="_blank"><ion-icon name="mail-outline"></ion-icon></ion-icon></a>
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>Fabricatiarosita@gmail.com</p>
+                        </div>
+                    </div>
+                    <h2 class="txt">Conéctate con nosotros</h2>
+                    <ul class="sci">
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <section class="contact__form">
                 <div>
-                    <form id="contact__footer" action="">
+                    <form id="contact__footer">
                         <h1>Contacto</h1>
                         <p>¿En que podemos ayudarte?</p>
                         <fieldset>
-                            <input placeholder="Su nombre" type="text">
+                            <input placeholder="Su nombre" type="text" required="required">
                         </fieldset>
                         <fieldset>
-                            <input placeholder="Su correo electrónico" type="text">
+                            <input placeholder="Su correo electrónico" type="text" required="required">
                         </fieldset>
                         <fieldset>
-                            <input placeholder="Su numero telefónico" type="text">
+                            <input placeholder="Su numero telefónico" type="text" required="required">
                         </fieldset>
                         <select>
                             <option value="">Categoría</option>
@@ -63,7 +106,7 @@
                             <option value="">Otro</option>
                         </select>
                         <fieldset>
-                            <textarea placeholder="Dejanos tu mensaje"></textarea>
+                            <textarea placeholder="Dejanos tu mensaje" required="required"></textarea>
                         </fieldset>
                         <div>
                             <button type="submit">Enviar</button>
@@ -123,5 +166,7 @@
         </div>
     </div>
     <script src="../js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@
     grid-area: footer;
     padding: 0px 10px 0px 10px;
     @include flex(flex, space-evenly, center, row);
+    flex-wrap: wrap;
     .menu{
         border: 1px solid $color-rosita;
         border-radius: 10px;
